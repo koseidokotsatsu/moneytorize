@@ -13,7 +13,7 @@ class Auth extends CI_Controller
         $this->form_validation->set_rules('username', 'Username', 'trim|required');
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
         if ($this->form_validation->run() == false) {
-            $data['title'] = 'Moneytorize - Login';
+            $data['title'] = 'Login';
             $this->load->view('template/auth_header', $data);
             $this->load->view('auth/signin');
             $this->load->view('template/auth_footer');
@@ -62,7 +62,7 @@ class Auth extends CI_Controller
             'matches' => 'Password dont match!',
         ]);
         if ($this->form_validation->run() == false) {
-            $data['title'] = 'Moneytorize - Register';
+            $data['title'] = 'Register';
             $this->load->view('template/auth_header', $data);
             $this->load->view('auth/signup');
             $this->load->view('template/auth_footer');
